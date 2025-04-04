@@ -39,11 +39,11 @@ public class DriverFactory {
 			tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
 		}
 		else {
-			System.out.println("please pass the right browser name: " + browserName);
+			System.out.println("please pass right browser name: " + browserName);
 		}
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
-		getDriver().get(prop.getProperty("url"));
+		getDriver().get(prop.getProperty("url").trim());
 		return getDriver();
 	}
 	
