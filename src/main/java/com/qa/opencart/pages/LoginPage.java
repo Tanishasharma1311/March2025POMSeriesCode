@@ -17,6 +17,7 @@ public class LoginPage {
 	private By loginBtn = By.xpath("//input[@type='submit']");
 	private By forgotPwdLink = By.linkText("Forgotten Password");
 	private By registerLink = By.linkText("Register");
+	private By home = By.linkText("home");
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
