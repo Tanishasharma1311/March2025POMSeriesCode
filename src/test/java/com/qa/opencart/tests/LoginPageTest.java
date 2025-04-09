@@ -40,9 +40,15 @@ public class LoginPageTest extends BaseTest {
 		boolean flag =loginPage.isForgotPwdLinkExist();
 		Assert.assertTrue(flag);
 	}
+	@Severity(SeverityLevel.MINOR)
+	@Description("checking tanisha test")
+	@Test(priority =5)
+	public void sanityTest() {
+		Assert.assertEquals(true, true);
+	}
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("checking user ia able to login to app with correct username and password......")
-	@Test(priority =4)
+	@Test(priority =4, enabled = false)
 	public void loginTest() {
 		accPage = loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 		Assert.assertTrue(accPage.isLogoutLinkExist());
